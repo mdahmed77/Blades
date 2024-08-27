@@ -1,0 +1,23 @@
+@font-face {
+    font-family: base;
+    src: url('./fonts/HarmoniaSansRegular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: bold;
+    src: url('../fonts/HarmoniaSansBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: title;
+    src: url('../fonts/SteppITCBold.otf') format('opentype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: titleBold;
+    src: url('./fonts/SteppITCUltra.otf') format('opentype');
+    font-weight: 900;
+}
