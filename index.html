@@ -6,8 +6,10 @@
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link href="./assets/css/font-awesome.css" rel="stylesheet" />
   <link href="./assets/css/bootstrap.css" rel="stylesheet" />
+  <link href="./assets/css/splide.css" rel="stylesheet" />
+  <link href="./assets/css/aos.css" rel="stylesheet">
   <link href="./assets/css/theme.css" rel="stylesheet" />
   <link href="./assets/css/home.css" rel="stylesheet" />
 </head>
@@ -16,22 +18,181 @@
   <div class="topBar">
     <p>Labor Day Sale: Up To 80% Off <a href="#">Shop Sale</a></p>
   </div>
-  <header class="header">
-    <div class="d-flex align-items-center justify-content-between">
-      <div class="d-flex align-items-center">
-        <a href="" class="logo">
-          <img src="./assets/images/logo.png" alt="">
-        </a>
-        <div class="searchBox">
-          <input class="search" type="search" placeholder="Search" name="" id="">
+  <div class="h-cover">
+    <header class="header">
+      <div class="container">
+        <div class="h-wrap">
+          <div class="d-flex align-items-center">
+            <a href="" class="logo">
+              <img src="./assets/images/logo.png" alt="">
+            </a>
+            <div class="searchBox">
+              <input type="text" placeholder="Search" name="" id="">
+              <button class="btn searchBtn">
+                <i class="far fa-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="user">
+            <a href="#">
+              <i class="fal fa-user"></i> Account
+            </a>
+            <a href="#">
+              <i class="fal fa-shopping-cart"></i> Cart
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="post-header">
+      <div class="container">
+        <div class="ph-wrap">
+          <a href="#">Closeouts</a>
+          <a href="#">New</a>
+          <div class="drop">
+            <a href="#">Swords <i class="far fa-angle-down"></i></a>
+            <div class="mega-menu"></div>
+          </div>
+          <div class="drop">
+            <a href="#">Knives <i class="far fa-angle-down"></i></a>
+            <div class="mega-menu"></div>
+          </div>
+          <div class="drop">
+            <a href="#">Brands <i class="far fa-angle-down"></i></a>
+            <div class="mega-menu"></div>
+          </div>
+          <div class="drop">
+            <a href="#">Categories <i class="far fa-angle-down"></i></a>
+            <div class="mega-menu"></div>
+          </div>
         </div>
       </div>
     </div>
-  </header>
+  </div>
+
+  <div class="hero">
+    <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="row g-0">
+              <div class="col-xl-8">
+                <img src="assets/images/sword1.jpeg" alt="">
+              </div>
+              <div class="col-xl-4">
+                <div class="text">
+                  <div>Svelte Blades</div>
+                  <h3>Royal Warrior Sale</h3>
+                  <p>Save Up To 80% At Our Annual Sale</p>
+                  <a href="#">Shop Sale Items</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="row g-0">
+              <div class="col-xl-4">
+                <div class="text">
+                  <div>Svelte Blades</div>
+                  <h3>Excalibre</h3>
+                  <p>Save Up To 80% At Our Annual Sale</p>
+                  <a href="#">Shop Sale Items</a>
+                </div>
+              </div>
+              <div class="col-xl-8">
+                <img src="assets/images/sword2.jpg" alt="">
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="row g-0">
+              <div class="col-xl-8">
+                <img src="assets/images/sword3.jpg" alt="">
+              </div>
+              <div class="col-xl-4">
+                <div class="text">
+                  <div>Svelte Blades</div>
+                  <h3>Vikings Slither</h3>
+                  <p>Save Up To 80% At Our Annual Sale</p>
+                  <a href="#">Shop Sale Items</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="row g-0">
+              <div class="col-xl-4">
+                <div class="text">
+                  <div>Svelte Blades</div>
+                  <h3>Killer Katana</h3>
+                  <p>Save Up To 80% At Our Annual Sale</p>
+                  <a href="#">Shop Sale Items</a>
+                </div>
+              </div>
+              <div class="col-xl-8">
+                <img src="assets/images/swordz.jpg" alt="">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="features">
+    <h2>We pride ourselves in our craftmanship!</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-md-6 col-12">
+          <div class="text">
+            <i class="fa-regular fa-hand-holding-seedling"></i>
+            <h6>Highest Quality Materials</h6>
+            <p>We strive to design and create products with the highest quality metals, bone, wood, and leather.</p>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-12">
+          <div class="text">
+            <i class="fa-regular fa-truck-bolt"></i>
+            <h6>Fast & Free Shipping</h6>
+            <p>We go to great lenghts to ensure your satisfaction by offering free shipping in the USA.</p>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-12">
+          <div class="text">
+            <i class="fa-regular fa-light fa-clock-rotate-left"></i>
+            <h6>30 day money back guarantee</h6>
+            <p>We pride ourselves on craftsmanship and have special interest in customer service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="doodle">
+    <div class="text">
+      <h2>Customize your sowrd</h2>
+      <p>Forge your vision: Custom Swords made to Order</p>
+      <a href="#">Build your own sword</a>
+    </div>
+  </div>
 
   <script src="./assets/js/jquery.js"></script>
   <script src="./assets/js/bootstrap.js"></script>
+  <script src="./assets/js/splide.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./assets/js/theme.js"></script>
+  <script>
+    $(document).ready(function () {
+      var hero = new Splide('.hero .splide', {
+        type: 'fade',
+        rewind: true,
+        autoplay: 'play',
+      });
+
+      hero.mount();
+    })
+  </script>
 </body>
 
 </html>

@@ -1,84 +1,14 @@
-const packets = document.querySelectorAll(".packet");
-const THROTTLE_INTERVAL = 10; // Adjust this as needed
-let lastTime = 0;
-window.addEventListener("mousemove", (ev) => {
-    const currentTime = Date.now();
-    if (currentTime - lastTime < THROTTLE_INTERVAL) {
-        return; // Throttle the event
-    }
-
-    lastTime = currentTime;
-
-    packets.forEach((packet) => {
-        const blob = packet.querySelector(".blob");
-        const fblob = packet.querySelector(".fakeblob");
-        const rec = fblob.getBoundingClientRect();
-        blob.style.opacity = "1";
-
-        requestAnimationFrame(() => {
-            blob.style.transform = `translate(${(ev.clientX - rec.left) - (rec.width / 2)}px,${(ev.clientY - rec.top) - (rec.height / 2)}px)`;
-        });
-    });
+AOS.init({
+    offset: 200,
+    delay: 50,
+    duration: 1000,
+    easing: 'ease-in-out',
+    mirror: true,
+    once: false,
+    anchorplacement: 'top-center',
 });
-$(document).ready(function () {
-    // All the ALERTS Dynamically showing from here
-    const alertPlaceholder = $('#alertPlaceholder');
-    function alert(message, type) {
-        const wrapper = $([
-            '<div class="alert alert-' + type + ' alert-dismissible" role="alert">',
-            '   <div>' + message + '</div>',
-            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-            '</div>'
-        ].join(''));
 
-        alertPlaceholder.append(wrapper);
-        setTimeout(function () {
-            wrapper.remove();
-        }, 2000);
-    }
-    const saveAlert = $('#saveProfile');
-    if (saveAlert.length) {
-        saveAlert.on('click', function () {
-            alert('Your profile has been saved', 'success');
-            saveAlert.css('pointer-events', 'none');
-            setTimeout(function () {
-                saveAlert.css('pointer-events', 'all');
-            }, 2000);
-        });
-    }
-    const deactivateAlert = $('#deactivateProfile');
-    if (deactivateAlert.length) {
-        deactivateAlert.on('click', function () {
-            alert('Your profile has been deactivated', 'danger');
-            deactivateAlert.css('pointer-events', 'none');
-            setTimeout(function () {
-                deactivateAlert.css('pointer-events', 'all');
-            }, 2000);
-        });
-    }
-    // Add to Collection
-    const saveIcon = $('.save-icon');
-    if (saveIcon.length) {
-        saveIcon.on('click', function () {
-            alert('Icon added to collection', 'success');
-            saveIcon.css('pointer-events', 'none');
-            setTimeout(function () {
-                saveIcon.css('pointer-events', 'all');
-            }, 2000);
-        });
-    }
-    // Copy to Clipboard
-    const copyIcon = $('.copy-icon');
-    if (copyIcon.length) {
-        copyIcon.on('click', function () {
-            alert('Copied PNG icon', 'success');
-            copyIcon.css('pointer-events', 'none');
-            setTimeout(function () {
-                copyIcon.css('pointer-events', 'all');
-            }, 2000);
-        });
-    }
-    // ALerts END
+$(document).ready(function () {
     $(".btn-menu").on("click", function () {
         $(this).hasClass("active")
             ? $(this).removeClass('active')
@@ -90,11 +20,6 @@ $(document).ready(function () {
             ? $(".overlay").removeClass("visible")
             : $(".overlay").addClass("visible");
     });
-    // $(".overlay, .closeMenu").on("click", function () {
-    //     $('.overlay').removeClass("visible");
-    //     $(".menu").removeClass("open");
-    //     $(".btn-menu").removeClass('active');
-    // });
     $('.sort span').on('click', function () {
         $('.sort span').hasClass('open')
             ? $('.sort span').removeClass('open')
@@ -105,8 +30,6 @@ $(document).ready(function () {
             ? $('.activeUser .drop').removeClass('open')
             : $('.activeUser .drop').addClass('open');
     });
-    var date = new Date().getFullYear();
-    $("#year").text(date);
     $('.icons-filter span').each(function () {
         $(this).on('click', function () {
             $(this).hasClass('active')
@@ -114,8 +37,6 @@ $(document).ready(function () {
                 : $('.icons-filter span').removeClass('active') && $(this).addClass('active');
         });
     });
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 });
 $(document).mouseup(function (ev) {
     var sidebar = $('.btn-menu, .navigation')
