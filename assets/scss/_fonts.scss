@@ -5,6 +5,11 @@
 }
 
 @font-face {
+    font-family: semi;
+    src: url('../fonts/HarmoniaSansSemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+@font-face {
     font-family: bold;
     src: url('../fonts/HarmoniaSansBold.ttf') format('truetype');
     font-weight: 600;
