@@ -1,0 +1,126 @@
+// Variables
+@import 'var.scss';
+
+.listing {
+    padding: 20px 0 30px;
+}
+
+.breads {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    a {
+        color: #000;
+        position: relative;
+
+        &:hover {
+            color: $red;
+        }
+
+        &::after {
+            content: "/";
+            color: #ddd;
+            position: absolute;
+            right: -20px;
+            top: 1px;
+            pointer-events: none;
+        }
+    }
+
+    span {
+        color: #767676;
+    }
+}
+
+.gTitle {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.banner {
+    width: 100%;
+    aspect-ratio: 10/3;
+    object-fit: cover;
+    object-position: center 80%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.listing {
+    .text-center {
+        margin-bottom: 60px;
+
+        p {
+            font-family: base;
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+}
+
+.filters {
+    .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $border;
+
+        h6,
+        i {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .reset {
+            background-color: #1d1d1d;
+            color: #fff;
+            font-size: 13px;
+            text-transform: uppercase;
+            padding: 5px 15px;
+            border: none;
+        }
+    }
+
+    .group {
+        border-bottom: 1px solid $border;
+
+        button {
+            padding: 15px 0;
+            border: none;
+            background-color: transparent;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-family: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            i {
+                font-size: 20px;
+            }
+        }
+
+        .body {
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+
+            &.open {
+                height: auto;
+                visibility: visible;
+            }
+
+            .form-check:last-child {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .form-check-input:checked {
+        background-color: $red;
+        border-color: $red;
+    }
+}

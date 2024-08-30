@@ -7,45 +7,63 @@ AOS.init({
     once: false,
     anchorplacement: 'top-center',
 });
+function adjustWizardHeight() {
+    const $wizard = $('.wiz');
+    const $activeMenu = $wizard.find('.nested.display');
+
+    if ($activeMenu.length === 0) {
+        const topLevelHeight = $wizard.children().not('.nest').outerHeight(true) + $wizard.children('.nest > .group').outerHeight(true);
+        $wizard.height(topLevelHeight);
+    } else {
+        const activeMenuHeight = $activeMenu.outerHeight();
+        $wizard.height(activeMenuHeight);
+    }
+}
+$(".wiz .next").on("click", function () {
+    const $currentMenu = $(this).closest('.nest');
+    const $wizard = $('.wiz');
+    let currentLevel = $wizard.attr('class').match(/level(\d+)/);
+    currentLevel = currentLevel ? parseInt(currentLevel[1]) : 1;
+    $wizard.removeClass(`level${currentLevel}`).addClass(`level${currentLevel + 1}`);
+    $currentMenu.find('> .nested').addClass('display');
+    adjustWizardHeight()
+});
+
+$(".wiz .prev").on("click", function () {
+    const $wizard = $('.wiz');
+    let currentLevel = $wizard.attr('class').match(/level(\d+)/);
+    currentLevel = currentLevel ? parseInt(currentLevel[1]) : 1;
+    $wizard.removeClass(`level${currentLevel}`).addClass(`level${currentLevel - 1}`);
+    $(this).closest('.nested').removeClass('display');
+    adjustWizardHeight()
+});
+
+$(".wiz .prev").each(function () {
+    var prevName = $(this).parent().prev().find('a').text();
+    $(this).find('span').text(prevName);
+})
+$('.toggler').on('click', function () {
+    $('.mobileMenu').hasClass('open')
+        ? $('.mobileMenu').removeClass('open')
+        : $('.mobileMenu').addClass('open')
+})
 
 $(document).ready(function () {
-    $(".btn-menu").on("click", function () {
-        $(this).hasClass("active")
-            ? $(this).removeClass('active')
-            : $(this).addClass('active');
-        $(".navigation").hasClass("in-view")
-            ? $(".navigation").removeClass("in-view")
-            : $(".navigation").addClass("in-view");
-        $(".overlay").hasClass("visible")
-            ? $(".overlay").removeClass("visible")
-            : $(".overlay").addClass("visible");
+    $('.searcher').on('click', function () {
+        $('.searchBox').hasClass('open')
+            ? $('.searchBox').removeClass('open')
+            : $('.searchBox').addClass('open');
     });
-    $('.sort span').on('click', function () {
-        $('.sort span').hasClass('open')
-            ? $('.sort span').removeClass('open')
-            : $('.sort span').addClass('open');
-    });
-    $('.activeUser .inline-flex').on('click', function () {
-        $('.activeUser .drop').hasClass('open')
-            ? $('.activeUser .drop').removeClass('open')
-            : $('.activeUser .drop').addClass('open');
-    });
-    $('.icons-filter span').each(function () {
-        $(this).on('click', function () {
-            $(this).hasClass('active')
-                ? $(this).removeClass('active')
-                : $('.icons-filter span').removeClass('active') && $(this).addClass('active');
-        });
-    });
+    adjustWizardHeight();
 });
 $(document).mouseup(function (ev) {
-    var sidebar = $('.btn-menu, .navigation')
-    if (!sidebar.is(ev.target) && sidebar.has(ev.target).length === 0) {
-        $(".navigation").removeClass("in-view");
+    var search = $('.searchBox, .searcher')
+    if (!search.is(ev.target) && search.has(ev.target).length === 0) {
+        $(".searchBox").removeClass("open");
     }
-    var activeUser = $('.activeUser')
-    if (!activeUser.is(ev.target) && activeUser.has(ev.target).length === 0) {
-        $('.activeUser .drop').removeClass('open');
+    var mobileMenu = $('.mobileMenu, .toggler')
+    if (!mobileMenu.is(ev.target) && mobileMenu.has(ev.target).length === 0) {
+        $('.mobileMenu').removeClass('open');
     }
     var activeSearchFilter = $('.icons-filter');
     if (!activeSearchFilter.is(ev.target) && activeSearchFilter.has(ev.target).length === 0) {

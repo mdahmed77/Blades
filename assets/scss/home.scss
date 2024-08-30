@@ -20,12 +20,14 @@
         justify-content: center;
         height: 100%;
         flex-direction: column;
-        padding: 20px 30px;
+        padding: 30px 30px 40px;
         background-color: #415039f0;
         position: relative;
         background-blend-mode: difference;
         background-image: url(../images/swirl.svg);
-
+        @media (max-width:991px) {
+            text-align: center;
+        }
         >* {
             position: relative;
             width: 100%;
@@ -43,12 +45,12 @@
         h3 {
             color: $cream;
             font-family: title;
-            font-size: 64px;
+            font-size: clamp(24px, calc(3vw + 2em), 64px);
         }
 
         p {
             color: $cream;
-            font-size: 24px;
+            font-size: clamp(16px, calc(.8vw + .5em), 24px);
         }
 
         a {
@@ -60,7 +62,14 @@
             padding: 12px 25px;
             font-family: bold;
             margin-right: auto;
+            @media (max-width:991px) {
+                margin-left: auto;
+            }
         }
+    }
+
+    .splide__pagination {
+        display: none;
     }
 }
 
@@ -78,7 +87,7 @@
         margin: 0 0 30px;
         text-align: center;
         color: #000;
-        font-size: 32px;
+        font-size: clamp(24px, calc(1vw + .8em), 32px);
     }
 
     .text {
@@ -115,11 +124,12 @@
         background-repeat: no-repeat;
         position: relative;
         overflow: hidden;
-        padding: 150px 30px;
+        padding: calc(4vw + 2em) 30px;
         display: flex;
         align-items: center;
         flex-direction: column;
         gap: 15px;
+        text-align: center;
 
         &::after {
             content: "";
@@ -138,6 +148,7 @@
             font-size: 54px;
             color: #fff;
             font-family: titlebold;
+            font-size: clamp(24px, calc(2vw + 1.5em), 54px);
         }
 
         p {
@@ -201,10 +212,12 @@
             display: block;
             margin-top: 5px;
             color: #000;
+            font-size: clamp(16px, 18px, 20px);
+            margin-bottom: 24px;
         }
 
         &:hover {
-            
+
             img {
                 top: -10px;
                 background-color: #fff;

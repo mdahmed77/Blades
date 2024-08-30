@@ -102,6 +102,18 @@ textarea,
     }
 }
 
+.hide-before {
+    @media (min-width:768px) {
+        display: none !important;
+    }
+}
+
+.hide-after {
+    @media (max-width:767px) {
+        display: none !important;
+    }
+}
+
 .container {
     @media (max-width:767px) {
         padding-inline: 20px;
@@ -152,11 +164,16 @@ textarea,
 .pb-20 {
     padding-bottom: 20px;
 }
+
 .gTitle {
     font-family: title;
-    font-size: 46px;
     color: #000;
     margin: 0 0 30px;
+    font-size: clamp(26px, calc(2vw + 1.5em), 46px);
+
+    @media(max-width:991px) {
+        margin: 0 0 20px;
+    }
 }
 
 .pagination {
@@ -357,6 +374,7 @@ input[type=number]::-webkit-inner-spin-button {
             text-align: center;
             padding: 60px 70px 70px;
             background-color: #fff !important;
+
             @media (max-width:767px) {
                 padding: 40px 30px 30px;
             }
@@ -406,19 +424,21 @@ input[type=number]::-webkit-inner-spin-button {
     border-radius: 10px;
 }
 
-.hr
-{
+.hr {
     border-top: 1px solid #D4D7DB;
     height: 0;
     width: 100%;
     display: block;
     margin: 110px 0;
+
     @media (max-width:1199px) {
         margin: 80px 0;
     }
+
     @media (max-width:991px) {
         margin: 60px 0;
     }
+
     @media (max-width:767px) {
         margin: 40px 0;
     }
@@ -427,11 +447,20 @@ input[type=number]::-webkit-inner-spin-button {
 
 .products {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .pod {
-    flex: 0 0 20%;
     position: relative;
+    flex: 0 0 20%;
+
+    @media (max-width:991px) {
+        flex: 0 0 33.334%;
+    }
+
+    @media (max-width:767px) {
+        flex: 0 0 50%;
+    }
 
     &::after {
         content: "";
@@ -440,17 +469,21 @@ input[type=number]::-webkit-inner-spin-button {
         box-shadow: 0 0 0 1px $border;
     }
 
-    .tag
-    {
+    .tag {
         position: absolute;
         z-index: 5;
-        top:12px;
+        top: 12px;
         left: 12px;
         background-color: $red;
         color: #fff;
         letter-spacing: 1px;
         font-size: 13px;
         padding: 1px 4px 0;
+
+        @media (max-width:600px) {
+            top: 8px;
+            left: 8px;
+        }
     }
 
     a {
@@ -461,6 +494,10 @@ input[type=number]::-webkit-inner-spin-button {
         cursor: pointer;
         position: relative;
         z-index: 3;
+
+        @media (max-width:600px) {
+            padding: 5px 5px 10px;
+        }
     }
 
     img {
@@ -504,27 +541,39 @@ input[type=number]::-webkit-inner-spin-button {
         font-size: 15px;
         color: #646464;
     }
-    .buy
-    {
+
+    .buy {
         padding: 5px;
         position: relative;
         z-index: 10;
-        .btn-buy
-        {
+
+        .btn-buy {
             background-color: #333333;
             border-radius: 0px;
             color: #fff;
             font-size: 15px;
             width: 100%;
-            &:hover
-            {
+
+            &:hover {
                 background-color: $red;
             }
-            i
-            {
+
+            i {
                 font-size: 14px;
             }
         }
+    }
+}
+
+.fourEach .pod {
+    flex: 0 0 25%;
+
+    @media (max-width:1199px) {
+        flex: 0 0 33.334%;
+    }
+
+    @media (max-width:991px) {
+        flex: 0 0 50%;
     }
 }
 

@@ -1,0 +1,105 @@
+.listing {
+  padding: 20px 0 30px;
+}
+
+.breads {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.breads a {
+  color: #000;
+  position: relative;
+}
+.breads a:hover {
+  color: #ba4444;
+}
+.breads a::after {
+  content: "/";
+  color: #ddd;
+  position: absolute;
+  right: -20px;
+  top: 1px;
+  pointer-events: none;
+}
+.breads span {
+  color: #767676;
+}
+
+.gTitle {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.banner {
+  width: 100%;
+  aspect-ratio: 10/3;
+  object-fit: cover;
+  object-position: center 80%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.listing .text-center {
+  margin-bottom: 60px;
+}
+.listing .text-center p {
+  font-family: base;
+  font-size: 20px;
+  text-align: center;
+}
+
+.filters .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8e8e1;
+}
+.filters .head h6,
+.filters .head i {
+  font-size: 20px;
+  margin: 0;
+}
+.filters .head .reset {
+  background-color: #1d1d1d;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  border: none;
+}
+.filters .group {
+  border-bottom: 1px solid #e8e8e1;
+}
+.filters .group button {
+  padding: 15px 0;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.filters .group button i {
+  font-size: 20px;
+}
+.filters .group .body {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.filters .group .body.open {
+  height: auto;
+  visibility: visible;
+}
+.filters .group .body .form-check:last-child {
+  margin-bottom: 20px;
+}
+.filters .form-check-input:checked {
+  background-color: #ba4444;
+  border-color: #ba4444;
+}
