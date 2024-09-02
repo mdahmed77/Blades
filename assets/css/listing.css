@@ -49,6 +49,9 @@
   text-align: center;
 }
 
+.filters {
+  margin-bottom: 20px;
+}
 .filters .head {
   display: flex;
   align-items: center;

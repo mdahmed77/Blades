@@ -1,0 +1,196 @@
+.product-details {
+  padding: 20px 0 30px;
+}
+
+.breads {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.breads a {
+  color: #000;
+  position: relative;
+}
+.breads a:hover {
+  color: #ba4444;
+}
+.breads a::after {
+  content: "/";
+  color: #ddd;
+  position: absolute;
+  right: -20px;
+  top: 1px;
+  pointer-events: none;
+}
+.breads span {
+  color: #767676;
+}
+
+.gTitle {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.gallary {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 30px 0;
+}
+.gallary .carousel-indicators {
+  position: relative;
+  margin: 0;
+  left: 0;
+  transform: none;
+  flex: 0 0 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10;
+}
+.gallary .carousel-indicators button {
+  text-indent: 0;
+  width: 100%;
+  height: auto;
+  border: none;
+  opacity: 1;
+  position: relative;
+}
+.gallary .carousel-indicators button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 0px #ba4444;
+  transition: 0.2s ease-out;
+}
+.gallary .carousel-indicators button.active::after {
+  box-shadow: inset 0 0 0 3px #ba4444;
+}
+.gallary .carousel-indicators button img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.gallary .carousel-inner {
+  flex: 0 0 calc(100% - 100px);
+}
+.gallary .carousel-inner .carousel-item {
+  position: relative;
+  cursor: zoom-in;
+}
+.gallary .carousel-inner img {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  aspect-ratio: 1/1;
+  user-select: none;
+  cursor: zoom-in;
+}
+.gallary .controls {
+  margin-left: 100px;
+  max-width: calc(100% - 100px);
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 12;
+  height: 0;
+}
+.gallary .controls .left {
+  transform: translateX(-50%);
+}
+.gallary .controls .right {
+  transform: translateX(50%);
+}
+.gallary .controls .left,
+.gallary .controls .right {
+  position: absolute;
+  margin: 0;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  top: 0;
+  border: none;
+  border-radius: 50px;
+  background-color: white;
+  font-size: 18px;
+  box-shadow: 0px 2px 3px 0 rgba(0, 0, 0, 0.25);
+}
+
+.details {
+  margin-top: 25px;
+}
+.details h4 {
+  font-family: title;
+  font-size: 36px;
+}
+.details .reviews {
+  font-size: 18px;
+  font-family: base;
+  margin: 20px 0;
+}
+.details .reviews .rating-stars {
+  font-size: 18px;
+  margin-right: 10px;
+}
+.details .price {
+  font-size: 32px;
+}
+.details .price .del {
+  position: relative;
+  font-size: 20px;
+  color: #767676;
+}
+.details .price .del::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(192, 0, 0);
+  height: 1px;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: rotate(-9deg) translateY(-50%);
+}
+.details .btn-theme {
+  background-color: #ba4444;
+  color: #fff;
+  padding: 15px;
+  width: 100%;
+  font-family: semi;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  border-radius: 0;
+  border: none;
+}
+.details .text {
+  margin: 30px 0;
+  padding: 20px 20px 20px 15px;
+  background-color: #f0f2f4;
+}
+.details .text h6 {
+  font-family: title;
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+.details .text ul {
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+.details .text li {
+  margin: 0 0 10px;
+  line-height: 1.3;
+  font-size: 14px;
+}
+.details .text li:last-child {
+  margin: 0;
+}
+.details .text li strong {
+  font-family: semi;
+}

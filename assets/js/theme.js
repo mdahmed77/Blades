@@ -1,12 +1,3 @@
-AOS.init({
-    offset: 200,
-    delay: 50,
-    duration: 1000,
-    easing: 'ease-in-out',
-    mirror: true,
-    once: false,
-    anchorplacement: 'top-center',
-});
 function adjustWizardHeight() {
     const $wizard = $('.wiz');
     const $activeMenu = $wizard.find('.nested.display');
