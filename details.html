@@ -327,8 +327,8 @@
                     origins.
                   </li>
                   <li>
-                    <strong>MIRROR-POLISHED STAINLESS STEEL BLADE:</strong> 35 1/4" blade offers durability and a striking
-                    appearance.
+                    <strong>MIRROR-POLISHED STAINLESS STEEL BLADE:</strong> 35 1/4" blade offers durability and a
+                    striking appearance.
                   </li>
                   <li>
                     <strong>ANTIQUE-FINISHED METAL ACCENTS:</strong> Solid metal cross guard and pommel enhance its
@@ -343,6 +343,14 @@
                   </li>
                 </ul>
               </div>
+              <div class="d-flex align-items-center">
+                <div class="quantity">
+                  <button class="btn"><i class="fas fa-minus"></i></button>
+                  <input class="form-control" type="number" max="100" min="1" maxlength="2" value="1">
+                  <button class="btn"><i class="fas fa-plus"></i></button>
+                </div>
+                <button class="wishlist"><i class="far fa-heart"></i> Add to Wishlist</button>
+              </div>
               <button class="btn btn-theme"><i class="far fa-shopping-cart"></i> Add to Cart</button>
             </div>
           </div>
@@ -352,178 +360,148 @@
   </div>
 
   <div class="reviews">
-    <h1 class="hero-title">
+    <div class="container">
+      <h2 class="gTitle">
+        Details
+      </h2>
+      <p class="desc">The Shikoto Rurousha Forged Sword Cane is a masterpiece designed for the discerning gentleman who values both
+        aesthetics and functionality. Crafted with precision, this sword cane is not just a walking accessory but a
+        statement of style and preparedness. The 23-inch blade, forged from Damascus steel and meticulously folded 828
+        times, offers unmatched sharpness and durability. Its double-edged design ensures superior cutting capability in
+        any situation. Encased within a sleek, leather-wrapped TPU handle, the sword maintains a discreet yet accessible
+        profile. The hidden blade-release mechanism is engineered for quick and easy deployment, providing peace of mind
+        and reliability when you need it most.</p>
+      <div class="reviewForm">
+        <h4>Add Your Review</h4>
+        <div class="row">
+          <div class="col-lg-9 col-12">
+            <div class="row">
+              <div class="col-md-8 col-12">
+                <input class="form-control" type="text" placeholder="Super Text">
+              </div>
+              <div class="col-md-4 col-12">
+                <div class="d-flex align-items-center gap-2 mt-1">
+                  <div class="star-rating">
+                    <span class="star" data-value="1">
+                      <i class="fas fa-star"></i>
+                    </span>
+                    <span class="star" data-value="2">
+                      <i class="fas fa-star"></i>
+                    </span>
+                    <span class="star" data-value="3">
+                      <i class="fas fa-star"></i>
+                    </span>
+                    <span class="star" data-value="4">
+                      <i class="fas fa-star"></i>
+                    </span>
+                    <span class="star" data-value="5">
+                      <i class="fas fa-star"></i>
+                    </span>
+                  </div>
+                  <p class="m-0 text-secondary">Your rating: <span id="rating-value">0</span></p>
+                </div>
+              </div>
+              <div class="col-12 mt-3">
+                <textarea class="form-control" name="" id="" placeholder="Message"></textarea>
+              </div>
+              <div class="col-12">
+                <button class="btn submit"><i class="far fa-paper-plane"></i> Submit</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-12">
+            <div class="ratingFilter">
+              <div class="rank fiveStars">
+                <div class="bar"></div> <span>5 <i class="fas fa-star"></i></span>
+              </div>
+              <div class="rank fourStars">
+                <div class="bar"></div> <span>4 <i class="fas fa-star"></i></span>
+              </div>
+              <div class="rank threeStars">
+                <div class="bar"></div> <span>3 <i class="fas fa-star"></i></span>
+              </div>
+              <div class="rank twoStars">
+                <div class="bar"></div> <span>2 <i class="fas fa-star"></i></span>
+              </div>
+              <div class="rank oneStars">
+                <div class="bar"></div> <span>1 <i class="fas fa-star"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="gTitle">
         Reviews
-        <div class="h-icon">
-            <img src="assets/images/infinity.svg" alt="" />
-        </div>
-    </h1>
-    <div class="row">
-        <div class="col-12">
-            <label for="">Sort By</label>
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div class="form-group mb-1">
-                <select class="form-control small cmtSort" id="ddlSkill">
-                    <option value="">Skill Level</option>
-                    <option value="Beginner">Beginner</option>
-                    <option value="Intermediate">Intermediate</option>
-                    <option value="Advanced">Advanced</option>
-                    <option value="Professional">Professional</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-            <div class="form-group mb-1">
-                <select class="form-control small cmtSort"
-                        id="ddlDistance">
-                    <option value="">Driving Distance</option>
-                    <option value="450+">450+</option>
-                    <option value="400-450">400-450</option>
-                    <option value="350-400">350-400</option>
-                    <option value="300-350">300-350</option>
-                    <option value="250-300">250-300</option>
-                    <option value="200-250">200-250</option>
-                    <option value="<200">&lt;200</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-            <div class="form-group mb-1">
-                <select class="form-control small cmtSort" id="ddlRating">
-                    <option value="">Star Rating</option>
-                    <option value="5">5-Star</option>
-                    <option value="4">4-Star</option>
-                    <option value="3">3-Star</option>
-                    <option value="2">2-Star</option>
-                    <option value="1">1-Star</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="col-sm-6 col-md-3">
-            <div class="form-group mb-1">
-                <select class="form-control small cmtSort" id="ddlDate">
-                    <option value="1">Newest</option>
-                    <option value="2">Oldest</option>
-                    <option value="3">Video Reviews</option>
-                </select>
-            </div>
-        </div>
-    </div>
-    <div class="reviews-list">
+      </h2>
+      <div class="reviews-list">
         <div class="single-review">
-            <div class="flex-box">
-                <div class="img-holder">
-                    <img src="assets/images/person.jfif" alt="" />
-                </div>
-                <div class="personInfo">
-                    <div class="upper">
-                        <a class="name" href="#">John Doe</a>
-                        <a class="capsule" href="#">(Review Participent L2, Advanced)</a>
-                    </div>
-                    <div class="lower">
-                        <div class="d-flex align-items-center">
-                            <div class="rates">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span class="badge">My Flight Ratings 10/5/-1/2</span>
-                            <span class="badge">Somewhat Beginner Friendly</span>
-                        </div>
-                        <p class="date d-inline-block">Jan 25 2020 2:22AM</p>
-                    </div>
-                </div>
+          <div class="avatar">M</div>
+          <div class="reviewBody">
+            <div class="upper">
+              <span class="name verified">Micheal E.</span>
+              <time>06/23/24</time>
             </div>
-            <p class="r-text">
-                I have owned two of these discs. My first was in G-blend
-                that was lost to the lake. My most recent is the MF Glow
-                C-blend X-out with the monkeystamp. First off, the disc
-                looks awesome.If you struggle to get a full Scurve flight
-                patter from some of the faster dist
-            </p>
+            <div class="rating-stars" style="--rating: 4;"></div>
+            <h6>Well made and beautiful, just</h6>
+            <p>Its so sharp and shiny also strong. Well made and beautiful, justWell made and beautiful,
+              just what I was looking for. A true example of Beauty & the Beast</p>
+          </div>
         </div>
         <div class="single-review">
-            <div class="flex-box">
-                <div class="img-holder">
-                    <img src="assets/images/person.jfif" alt="" />
-                </div>
-                <div class="personInfo">
-                    <div class="upper">
-                        <a class="name" href="#">John Doe</a>
-                        <a class="capsule" href="#">(Review Participent L2, Advanced)</a>
-                    </div>
-                    <div class="lower">
-                        <div class="d-flex align-items-center">
-                            <div class="rates">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span class="badge">My Flight Ratings 10/5/-1/2</span>
-                            <span class="badge">Somewhat Beginner Friendly</span>
-                        </div>
-                        <p class="date d-inline-block">Jan 25 2020 2:22AM</p>
-                    </div>
-                </div>
+          <div class="avatar">K</div>
+          <div class="reviewBody">
+            <div class="upper">
+              <span class="name verified">Kevin B.</span>
+              <time>06/23/24</time>
             </div>
-            <p class="r-text">
-                I have owned two of these discs. My first was in G-blend
-                that was lost to the lake. My most recent is the MF Glow
-                C-blend X-out with the monkeystamp. First off, the disc
-                looks awesome.If you struggle to get a full Scurve flight
-                patter from some of the faster dist
-            </p>
+            <div class="rating-stars" style="--rating: 5;"></div>
+            <h6>Well made and beautiful, just</h6>
+            <p>Its so sharp and shiny also strong. Well made and beautiful, justWell made and beautiful,
+              just what I was looking for. A true example of Beauty & the Beast</p>
+          </div>
         </div>
         <div class="single-review">
-            <div class="flex-box">
-                <div class="img-holder">
-                    <img src="assets/images/person.jfif" alt="" />
-                </div>
-                <div class="personInfo">
-                    <div class="upper">
-                        <a class="name" href="#">John Doe</a>
-                        <a class="capsule" href="#">(Review Participent L2, Advanced)</a>
-                    </div>
-                    <div class="lower">
-                        <div class="d-flex align-items-center">
-                            <div class="rates">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <span class="badge">My Flight Ratings 10/5/-1/2</span>
-                            <span class="badge">Somewhat Beginner Friendly</span>
-                        </div>
-                        <p class="date d-inline-block">Jan 25 2020 2:22AM</p>
-                    </div>
-                </div>
+          <div class="avatar">R</div>
+          <div class="reviewBody">
+            <div class="upper">
+              <span class="name verified">Rebecca F.</span>
+              <time>06/23/24</time>
             </div>
-            <p class="r-text">
-                I have owned two of these discs. My first was in G-blend
-                that was lost to the lake. My most recent is the MF Glow
-                C-blend X-out with the monkeystamp. First off, the disc
-                looks awesome.If you struggle to get a full Scurve flight
-                patter from some of the faster dist
-            </p>
+            <div class="rating-stars" style="--rating: 1;"></div>
+            <h6>Well made and beautiful, just</h6>
+            <p>Its so sharp and shiny also strong. Well made and beautiful, justWell made and beautiful,
+              just what I was looking for. A true example of Beauty & the Beast</p>
+          </div>
         </div>
+        <div class="single-review">
+          <div class="avatar">L</div>
+          <div class="reviewBody">
+            <div class="upper">
+              <span class="name verified">Lance K.</span>
+              <time>06/23/24</time>
+            </div>
+            <div class="rating-stars" style="--rating: 2;"></div>
+            <h6>Well made and beautiful, just</h6>
+            <p>Its so sharp and shiny also strong. Well made and beautiful, justWell made and beautiful,
+              just what I was looking for. A true example of Beauty & the Beast</p>
+          </div>
+        </div>
+        <div class="single-review">
+          <div class="avatar">V</div>
+          <div class="reviewBody">
+            <div class="upper">
+              <span class="name verified">Viona K.</span>
+              <time>06/23/24</time>
+            </div>
+            <div class="rating-stars" style="--rating: 3;"></div>
+            <h6>Well made and beautiful, just</h6>
+            <p>Its so sharp and shiny also strong. Well made and beautiful, justWell made and beautiful,
+              just what I was looking for. A true example of Beauty & the Beast</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="add-review mt-2">
-        <a href="#" class="btn btn-default text-light">
-            Read More Reviews
-        </a>
-        <a data-toggle="modal" href="#add_review_modal"><i class="far fa-comment"></i> Add Your Review</a>
-    </div>
-</div>
+  </div>
 
   <div class="preFooter">
     <div class="container">
@@ -621,6 +599,26 @@
       carousel.addEventListener('touchend', swipeEnd);
       carousel.addEventListener('mousedown', swipeStart);
       carousel.addEventListener('mouseup', swipeEnd);
+
+      // Star Rating
+      $('.star').hover(
+        function () {
+          $(this).addClass('hovered');
+          $(this).prevAll().addClass('hovered');
+        },
+        function () {
+          $(this).removeClass('hovered');
+          $(this).prevAll().removeClass('hovered');
+        }
+      );
+
+      $('.star').on('click', function () {
+        let rating = $(this).data('value');
+        $('#rating-value').text(rating);
+        $('.star').removeClass('selected');
+        $(this).addClass('selected');
+        $(this).prevAll().addClass('selected');
+      });
 
     });
 

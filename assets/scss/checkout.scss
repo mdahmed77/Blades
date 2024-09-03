@@ -1,0 +1,339 @@
+@import "var.scss";
+
+.checkout-wrapper {
+    background-image: linear-gradient(to right, #fff 58%, #fafafa 42%);
+    min-height: 100vh;
+    width: 100%;
+
+    @media (max-width:991px) {
+        background: #fff;
+    }
+}
+
+.fields-box {
+    min-height: 100vh;
+    background-color: #fff;
+    padding: 50px;
+
+    @media (max-width:991px) {
+        min-height: 0px;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 24px;
+        font-family: lm;
+        font-weight: 300;
+    }
+
+    .crumbs {
+        display: flex;
+        align-items: center;
+        margin: 15px 0 30px;
+
+        li {
+            &::after {
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 400;
+                content: "\f105";
+                position: relative;
+                top: 1px;
+                margin: 0 7px 0 5px;
+                font-size: 14px;
+            }
+
+            &:last-child::after {
+                display: none;
+            }
+
+            &.active a {
+                font-size: 14px;
+                font-family: bold;
+                color: $dark;
+                pointer-events: none;
+            }
+        }
+
+        a {
+            color: #000;
+            font-size: 14px;
+
+            &:hover {
+                color: $red;
+            }
+
+        }
+
+
+        .active~li {
+            a {
+                pointer-events: none;
+                opacity: .65;
+            }
+        }
+    }
+
+
+    h6 {
+        margin-bottom: 16px;
+        font-weight: 300;
+    }
+
+    .small-gaps {
+        margin-left: -5px !important;
+        margin-right: -5px !important;
+
+        >div {
+            padding-left: 5px !important;
+            padding-right: 5px !important;
+        }
+    }
+
+    .field-set {
+        position: relative;
+        margin-bottom: 30px;
+    }
+}
+
+.form-group {
+    margin: 0;
+    position: relative;
+    background-color: #fff;
+    margin: 0 0 10px;
+
+    &.drop-field::after {
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 400;
+        content: "\f107";
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        z-index: 10;
+        transform: translateY(-50%);
+        opacity: .6;
+    }
+
+    .form-control {
+        border: 1px solid #d9d9d9;
+        height: 46px;
+        border-radius: 6px;
+        position: relative;
+        background: transparent;
+        z-index: 1;
+        font-size: 14px;
+        transition: .15s linear;
+        padding: 5px 12px;
+    }
+
+    label {
+        position: absolute;
+        top: 12px;
+        left: 13px;
+        transition: .15s linear;
+        z-index: 0;
+        font-size: 14px;
+        color: #7b7b7b;
+    }
+
+    &.unEmpty {
+        label {
+            top: 4px;
+            font-size: 13px;
+        }
+
+        .form-control {
+            padding: 15px 12px 0px !important;
+        }
+    }
+}
+
+.cart-info {
+    background-color: #fafafa;
+    border-left: 1px solid #ddd;
+    min-height: 100vh;
+    padding: 50px;
+
+    @media (max-width:991px) {
+        min-height: 0px;
+        padding: 25px;
+        border: 1px solid #ddd;
+        margin-bottom: 30px;
+    }
+}
+
+.form-check-input:checked {
+    background-color: $red;
+    border-color: $red;
+}
+
+.btns {
+    .btn {
+        border-radius: 5px;
+        padding: 15px 25px;
+    }
+}
+
+.link {
+
+    font-family: bold;
+    font-size: 14px;
+    color: $dark;
+    margin: 0 0 0 15px;
+
+    i {
+        margin-right: 6px;
+    }
+
+    &:hover {
+        color: $red;
+    }
+}
+
+hr {
+    background: #bcbcbc;
+}
+
+.tupple {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+
+    >div {
+        margin: 0;
+    }
+
+    label {
+        font-size: 16px;
+        font-weight: 400;
+        color: #1d1d1d;
+    }
+
+    h6 {
+        font-family: bold;
+        font-size: 14px;
+    }
+
+    span {
+        font-size: 13px;
+        color: #7b7b7b;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-family: lmm;
+
+        small {
+            font-size: 14px;
+            font-family: bold;
+        }
+    }
+
+    .thumb {
+        display: inline-block;
+        margin-right: 10px;
+
+        img {
+            max-height: 80px;
+            width: auto;
+        }
+    }
+
+    .pcode {
+        font-family: bold;
+        color: #000;
+        font-size: 13px;
+    }
+}
+
+.table-holder {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-bottom: 30px;
+
+    .table {
+        margin: 0;
+
+        tr {
+            &:last-child {
+                td {
+                    border-bottom: none !important;
+                }
+            }
+
+            td {
+
+                font-size: 14px;
+                padding: 12px 0;
+                color: #000;
+
+                &:first-child {
+                    color: #7b7b7b;
+                }
+
+                &:last-child {
+                    text-align: right;
+                }
+
+                a {
+
+                    font-family: bold;
+                    font-size: 14px;
+                    color: $dark;
+                    margin: 0 0 0 15px;
+
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slot {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+        font-family: bold;
+        font-size: 14px;
+    }
+}
+
+.grouped-slots {
+    margin-bottom: 30px;
+
+    .slot {
+        margin-bottom: 0px;
+        border-radius: 0px;
+
+        &~.slot {
+            margin-top: -1px;
+        }
+
+        &:first-child {
+            border-radius: 5px 5px 0 0;
+        }
+
+        &:last-child {
+            border-radius: 0 0 5px 5px;
+        }
+    }
+
+    .form-slot {
+        background: #f4f4f4;
+        padding-top: 20px;
+        display: none;
+    }
+}
+
+.form-check-label {
+    cursor: pointer;
+}

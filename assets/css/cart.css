@@ -1,0 +1,227 @@
+.gTitle {
+  font-size: 32px;
+  margin: 30px 0 20px;
+}
+
+@media (min-width: 992px) {
+  .hide-before {
+    display: none !important;
+  }
+}
+@media (max-width: 991px) {
+  .hide-before {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .hide-after {
+    display: block !important;
+  }
+}
+@media (max-width: 991px) {
+  .hide-after {
+    display: none !important;
+  }
+}
+
+.table {
+  table-layout: fixed;
+  margin: 0;
+}
+@media (max-width: 991px) {
+  .table {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 991px) {
+  .table thead {
+    display: none;
+  }
+}
+.table thead tr th {
+  border-bottom: 1px solid #ddd !important;
+  padding: 10px 10px;
+  font-size: 14px;
+  font-family: semi;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+@media (min-width: 992px) {
+  .table thead tr th.hide-after {
+    display: table-cell !important;
+  }
+}
+.table thead tr th:nth-child(2) {
+  width: 150px;
+}
+.table thead tr th:last-child {
+  width: 100px;
+}
+@media (max-width: 991px) {
+  .table tbody {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 991px) {
+  .table tbody tr {
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+}
+.table tbody tr td {
+  vertical-align: middle;
+  padding: 10px 10px;
+  font-size: 16px;
+  font-family: base;
+  white-space: nowrap;
+}
+@media (min-width: 992px) {
+  .table tbody tr td.hide-after {
+    display: table-cell !important;
+  }
+}
+@media (max-width: 991px) {
+  .table tbody tr td {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    flex-grow: 1;
+  }
+  .table tbody tr td:nth-last-child(2) {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 25px;
+  }
+}
+.table tbody tr td:last-child {
+  width: 100px;
+}
+.table tbody tr td .thumb {
+  display: inline-block;
+  margin-right: 10px;
+  border: 1px solid #e8e8e1;
+  background-color: #f0f2f4;
+}
+@media (max-width: 991px) {
+  .table tbody tr td .thumb {
+    display: flex;
+    align-items: center;
+  }
+  .table tbody tr td .thumb img {
+    height: 65px;
+    width: 65px;
+  }
+}
+.table tbody tr td .pcode {
+  font-family: bold;
+  color: #000;
+  font-size: 15px;
+}
+@media (max-width: 991px) {
+  .table tbody tr td .pcode {
+    position: relative;
+    top: -26px;
+  }
+}
+.table tbody tr td h6 {
+  font-size: 16px;
+  font-family: bold;
+  margin: 0;
+}
+.table tbody tr td .input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+@media (max-width: 991px) {
+  .table tbody tr td .input-group {
+    position: absolute;
+    left: 76px;
+    bottom: 12px;
+  }
+}
+.table tbody tr td .input-group input {
+  width: auto;
+  max-width: 50px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0px !important;
+  border: 1px solid #ddd;
+  height: 40px;
+  padding: 0px;
+  font-size: 16px;
+  font-family: base;
+  text-align: center;
+}
+.table tbody tr td .input-group .btn-num {
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 0px;
+  height: 100%;
+  font-size: 12px;
+  height: 40px;
+  padding: 10px;
+}
+.table tbody tr td .input-group .btn-num:hover {
+  background: #e1e3e4;
+}
+.table .remove {
+  color: #ba4444;
+}
+.table .remove:hover {
+  color: red;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.back-link {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+}
+.back-link a {
+  font-family: bold;
+  font-size: 14px;
+  color: #333333;
+}
+.back-link a:hover {
+  color: #ba4444;
+}
+
+.countinue {
+  max-width: 360px;
+  width: 100%;
+  margin-right: 15px;
+  margin-left: auto;
+  display: block;
+  background-color: #f4f4f4;
+  border: 1px solid #eee;
+  padding: 15px;
+}
+.countinue span {
+  font-size: 16px;
+  font-family: bold;
+}
+.countinue h5 {
+  font-size: 24px;
+  font-family: bold;
+}
+.countinue .btn {
+  width: 100%;
+  margin-top: 25px;
+}

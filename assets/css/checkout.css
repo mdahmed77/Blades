@@ -1,0 +1,281 @@
+.checkout-wrapper {
+  background-image: linear-gradient(to right, #fff 58%, #fafafa 42%);
+  min-height: 100vh;
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .checkout-wrapper {
+    background: #fff;
+  }
+}
+
+.fields-box {
+  min-height: 100vh;
+  background-color: #fff;
+  padding: 50px;
+}
+@media (max-width: 991px) {
+  .fields-box {
+    min-height: 0px;
+    padding: 25px;
+  }
+}
+.fields-box h1 {
+  font-size: 24px;
+  font-family: lm;
+  font-weight: 300;
+}
+.fields-box .crumbs {
+  display: flex;
+  align-items: center;
+  margin: 15px 0 30px;
+}
+.fields-box .crumbs li::after {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+  content: "\f105";
+  position: relative;
+  top: 1px;
+  margin: 0 7px 0 5px;
+  font-size: 14px;
+}
+.fields-box .crumbs li:last-child::after {
+  display: none;
+}
+.fields-box .crumbs li.active a {
+  font-size: 14px;
+  font-family: bold;
+  color: #333333;
+  pointer-events: none;
+}
+.fields-box .crumbs a {
+  color: #000;
+  font-size: 14px;
+}
+.fields-box .crumbs a:hover {
+  color: #ba4444;
+}
+.fields-box .crumbs .active ~ li a {
+  pointer-events: none;
+  opacity: 0.65;
+}
+.fields-box h6 {
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+.fields-box .small-gaps {
+  margin-left: -5px !important;
+  margin-right: -5px !important;
+}
+.fields-box .small-gaps > div {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+.fields-box .field-set {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin: 0;
+  position: relative;
+  background-color: #fff;
+  margin: 0 0 10px;
+}
+.form-group.drop-field::after {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+  content: "\f107";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+  opacity: 0.6;
+}
+.form-group .form-control {
+  border: 1px solid #d9d9d9;
+  height: 46px;
+  border-radius: 6px;
+  position: relative;
+  background: transparent;
+  z-index: 1;
+  font-size: 14px;
+  transition: 0.15s linear;
+  padding: 5px 12px;
+}
+.form-group label {
+  position: absolute;
+  top: 12px;
+  left: 13px;
+  transition: 0.15s linear;
+  z-index: 0;
+  font-size: 14px;
+  color: #7b7b7b;
+}
+.form-group.unEmpty label {
+  top: 4px;
+  font-size: 13px;
+}
+.form-group.unEmpty .form-control {
+  padding: 15px 12px 0px !important;
+}
+
+.cart-info {
+  background-color: #fafafa;
+  border-left: 1px solid #ddd;
+  min-height: 100vh;
+  padding: 50px;
+}
+@media (max-width: 991px) {
+  .cart-info {
+    min-height: 0px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+  }
+}
+
+.form-check-input:checked {
+  background-color: #ba4444;
+  border-color: #ba4444;
+}
+
+.btns .btn {
+  border-radius: 5px;
+  padding: 15px 25px;
+}
+
+.link {
+  font-family: bold;
+  font-size: 14px;
+  color: #333333;
+  margin: 0 0 0 15px;
+}
+.link i {
+  margin-right: 6px;
+}
+.link:hover {
+  color: #ba4444;
+}
+
+hr {
+  background: #bcbcbc;
+}
+
+.tupple {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+.tupple > div {
+  margin: 0;
+}
+.tupple label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1d1d1d;
+}
+.tupple h6 {
+  font-family: bold;
+  font-size: 14px;
+}
+.tupple span {
+  font-size: 13px;
+  color: #7b7b7b;
+}
+.tupple h2 {
+  font-size: 24px;
+  font-family: lmm;
+}
+.tupple h2 small {
+  font-size: 14px;
+  font-family: bold;
+}
+.tupple .thumb {
+  display: inline-block;
+  margin-right: 10px;
+}
+.tupple .thumb img {
+  max-height: 80px;
+  width: auto;
+}
+.tupple .pcode {
+  font-family: bold;
+  color: #000;
+  font-size: 13px;
+}
+
+.table-holder {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+.table-holder .table {
+  margin: 0;
+}
+.table-holder .table tr:last-child td {
+  border-bottom: none !important;
+}
+.table-holder .table tr td {
+  font-size: 14px;
+  padding: 12px 0;
+  color: #000;
+}
+.table-holder .table tr td:first-child {
+  color: #7b7b7b;
+}
+.table-holder .table tr td:last-child {
+  text-align: right;
+}
+.table-holder .table tr td a {
+  font-family: bold;
+  font-size: 14px;
+  color: #333333;
+  margin: 0 0 0 15px;
+}
+.table-holder .table tr td a:hover {
+  color: #ba4444;
+}
+
+.slot {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.slot span {
+  font-family: bold;
+  font-size: 14px;
+}
+
+.grouped-slots {
+  margin-bottom: 30px;
+}
+.grouped-slots .slot {
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+.grouped-slots .slot ~ .slot {
+  margin-top: -1px;
+}
+.grouped-slots .slot:first-child {
+  border-radius: 5px 5px 0 0;
+}
+.grouped-slots .slot:last-child {
+  border-radius: 0 0 5px 5px;
+}
+.grouped-slots .form-slot {
+  background: #f4f4f4;
+  padding-top: 20px;
+  display: none;
+}
+
+.form-check-label {
+  cursor: pointer;
+}
