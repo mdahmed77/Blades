@@ -20,10 +20,21 @@
     padding: 25px;
   }
 }
+@media (max-width: 767px) {
+  .fields-box {
+    padding: 30px 0;
+  }
+}
+.fields-box .brand {
+  height: 36px;
+  width: auto;
+}
+.fields-box .brand + h1 {
+  display: none;
+}
 .fields-box h1 {
-  font-size: 24px;
-  font-family: lm;
-  font-weight: 300;
+  font-size: 32px;
+  font-family: title;
 }
 .fields-box .crumbs {
   display: flex;
@@ -31,7 +42,7 @@
   margin: 15px 0 30px;
 }
 .fields-box .crumbs li::after {
-  font-family: "Font Awesome 5 Pro";
+  font-family: "Font Awesome 6 Pro";
   font-weight: 400;
   content: "\f105";
   position: relative;
@@ -83,7 +94,7 @@
   margin: 0 0 10px;
 }
 .form-group.drop-field::after {
-  font-family: "Font Awesome 5 Pro";
+  font-family: "Font Awesome 6 Pro";
   font-weight: 400;
   content: "\f107";
   position: absolute;
@@ -101,14 +112,14 @@
   background: transparent;
   z-index: 1;
   font-size: 14px;
-  transition: 0.15s linear;
+  transition: 0.1s ease-in;
   padding: 5px 12px;
 }
 .form-group label {
   position: absolute;
   top: 12px;
   left: 13px;
-  transition: 0.15s linear;
+  transition: 0.1s ease-in;
   z-index: 0;
   font-size: 14px;
   color: #7b7b7b;
@@ -135,6 +146,11 @@
     margin-bottom: 30px;
   }
 }
+@media (max-width: 575px) {
+  .cart-info {
+    padding: 10px;
+  }
+}
 
 .form-check-input:checked {
   background-color: #ba4444;
@@ -147,10 +163,12 @@
 }
 
 .link {
-  font-family: bold;
+  font-family: semi;
   font-size: 14px;
+  text-transform: uppercase;
   color: #333333;
-  margin: 0 0 0 15px;
+  margin-top: 15px;
+  display: inline-block;
 }
 .link i {
   margin-right: 6px;
@@ -168,6 +186,7 @@ hr {
   align-items: center;
   justify-content: space-between;
   padding: 5px 0;
+  position: relative;
 }
 .tupple > div {
   margin: 0;
@@ -178,8 +197,27 @@ hr {
   color: #1d1d1d;
 }
 .tupple h6 {
-  font-family: bold;
-  font-size: 14px;
+  font-family: semi;
+  font-size: 16px;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.tupple h6 i {
+  font-size: 17px;
+  position: relative;
+  top: -1px;
+}
+.tupple h6 i::after {
+  height: 13px;
+  width: 1.5px;
+  background-color: #000;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .tupple span {
   font-size: 13px;
@@ -187,24 +225,44 @@ hr {
 }
 .tupple h2 {
   font-size: 24px;
-  font-family: lmm;
+  font-family: bold;
 }
 .tupple h2 small {
   font-size: 14px;
   font-family: bold;
 }
+.tupple .box {
+  display: flex;
+  align-items: center;
+}
 .tupple .thumb {
   display: inline-block;
   margin-right: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+@media (max-width: 575px) {
+  .tupple .thumb {
+    display: none !important;
+  }
 }
 .tupple .thumb img {
-  max-height: 80px;
-  width: auto;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+}
+@media (max-width: 575px) {
+  .tupple .thumb img {
+    min-height: 40px;
+    min-width: 40px;
+    height: 40px;
+    width: 40px;
+  }
 }
 .tupple .pcode {
-  font-family: bold;
+  font-family: semi;
   color: #000;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .table-holder {
@@ -213,16 +271,53 @@ hr {
   padding: 0 15px;
   margin-bottom: 30px;
 }
+@media (max-width: 767px) {
+  .table-holder {
+    padding: 0 10px;
+  }
+}
 .table-holder .table {
   margin: 0;
 }
 .table-holder .table tr:last-child td {
   border-bottom: none !important;
 }
+@media (max-width: 575px) {
+  .table-holder .table tr {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  .table-holder .table tr:last-child {
+    border: none;
+  }
+}
 .table-holder .table tr td {
   font-size: 14px;
   padding: 12px 0;
   color: #000;
+}
+@media (max-width: 575px) {
+  .table-holder .table tr td {
+    border: none;
+    flex-grow: 1;
+    padding: 0;
+  }
+  .table-holder .table tr td:first-child {
+    order: 1;
+    width: 50%;
+  }
+  .table-holder .table tr td:last-child {
+    order: 2;
+    width: 50%;
+  }
+  .table-holder .table tr td:nth-child(2) {
+    order: 3;
+    padding-top: 5px;
+    width: 100%;
+  }
 }
 .table-holder .table tr td:first-child {
   color: #7b7b7b;

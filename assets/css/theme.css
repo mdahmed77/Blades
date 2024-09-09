@@ -534,7 +534,7 @@ input[type=number]::-webkit-inner-spin-button {
   top: -5px;
   font-size: 65%;
 }
-.pod .price strike {
+.pod .price del {
   font-family: base;
   font-size: 14px;
   color: #787878;
@@ -625,17 +625,33 @@ input[type=number]::-webkit-inner-spin-button {
   margin: 0px !important;
   font-family: "bold";
   letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+@media (max-width: 767px) {
+  .topBar p {
+    font-family: semi;
+    font-size: 13px;
+  }
 }
 .topBar a {
   color: #fff;
   background-color: #ba4444;
   padding: 3px 16px;
   border-radius: 4px;
-  margin-left: 10px;
   display: inline-flex;
   font-family: base;
   text-transform: uppercase;
   font-size: 14px;
+}
+@media (max-width: 767px) {
+  .topBar a {
+    padding: 2px 12px;
+    font-size: 13px;
+  }
 }
 
 .header {
@@ -1157,12 +1173,18 @@ input[type=number]::-webkit-inner-spin-button {
   display: flex;
   align-items: center;
   min-height: 54px;
+  position: relative;
 }
 @media (max-width: 1199px) {
   .preFooter .subscribeField {
     border-radius: 8px 8px 8px 0;
     padding: 3px 5px 3px 10px;
     min-height: 45px;
+  }
+}
+@media (max-width: 575px) {
+  .preFooter .subscribeField {
+    margin-bottom: 40px;
   }
 }
 .preFooter .subscribeField .fa-light {
@@ -1235,6 +1257,13 @@ input[type=number]::-webkit-inner-spin-button {
   .preFooter .subscribeField .btn {
     height: 35px;
     border-radius: 4px;
+  }
+}
+@media (max-width: 575px) {
+  .preFooter .subscribeField .btn {
+    position: absolute;
+    top: 50px;
+    right: 0;
   }
 }
 

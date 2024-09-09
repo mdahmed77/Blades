@@ -1,0 +1,30 @@
+.thanks {
+  padding: 4vw 0;
+}
+.thanks .placed {
+  border: 1px solid #e8e8e1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.thanks .placed h2 {
+  font-size: 42px;
+  font-family: title;
+}
+.thanks .placed span {
+  font-size: 20px;
+  font-family: base;
+}
+.thanks .placed span strong {
+  font-family: bold;
+}
+.thanks .placed p {
+  margin: 20px 0;
+}
+.thanks .placed p a {
+  color: #ba4444;
+  font-family: semi;
+}

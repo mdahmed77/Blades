@@ -1,0 +1,38 @@
+@import 'var';
+
+.thanks {
+    padding: 4vw 0;
+
+    .placed {
+        border: 1px solid $border;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
+
+        h2 {
+            font-size: 42px;
+            font-family: title;
+        }
+
+        span {
+            font-size: 20px;
+            font-family: base;
+
+            strong {
+                font-family: bold;
+            }
+        }
+        p
+        {
+            margin: 20px 0;
+            a
+            {
+                color: $red;
+                font-family: semi;
+            }
+        }
+    }
+}

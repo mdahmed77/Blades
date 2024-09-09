@@ -1,0 +1,77 @@
+.forms {
+  padding: 60px 0;
+}
+.forms .userForm {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 2px 7px 0 rgba(0, 0, 0, 0.15);
+  margin: 0 0 30px;
+}
+.forms .userForm .link {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #ba4444;
+  font-family: semi;
+}
+.forms .orderForm {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 2px 7px 0 rgba(0, 0, 0, 0.15);
+}
+.forms .orderForm h2 {
+  font-family: title;
+  font-size: 32px;
+  margin: 0 0 10px;
+}
+.forms .orderForm p {
+  font-size: 17px;
+  color: #676767;
+}
+.forms .nav-tabs {
+  display: flex;
+  gap: 10px;
+  border: none;
+  margin: 0 0 15px;
+}
+.forms .nav-tabs .nav-item {
+  background-color: transparent !important;
+  border: none !important;
+  flex: 0 0 calc(50% - 10px);
+}
+.forms .nav-tabs .nav-link {
+  background-color: #e7ecf0;
+  color: #000;
+  border-radius: 0;
+  border: none;
+  font-family: semi;
+  text-transform: uppercase;
+  border-radius: 7px;
+}
+.forms .nav-tabs .nav-link.active {
+  background-color: #ba4444;
+  color: #fff;
+}
+.forms label {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: semi;
+}
+.forms .form-control {
+  border-radius: 0px;
+  margin: 3px 0 15px;
+  min-height: 46px;
+}
+.forms .btn-theme {
+  font-size: 14px;
+  margin-top: 15px;
+  padding: 10px 10px 11px;
+  width: auto;
+  padding-inline: 30px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.form-check-input:checked {
+  background-color: #ba4444;
+  border-color: #ba4444;
+}

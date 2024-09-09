@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/theme.css">
-    <link rel="stylesheet" href="assets/css/thanks.css">
+    <link rel="stylesheet" href="assets/css/login.css">
     <title>Order Placed | Svelte Swords</title>
 </head>
 
@@ -275,20 +275,149 @@
         </div>
     </div>
 
-
-    <div class="thanks">
+    <div class="forms">
         <div class="container">
-            <div class="placed">
-                <h2>Thank You!</h2>
-                <span>Your Order <strong>#S1320</strong> has been Placed</span>
-                <p>To track your order <a href="#">#331-9913-4663</a></p>
-                <a href="index.html" class="btn btn-theme">Continue Shopping</a>
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="userForm">
+                        <ul class="nav nav-tabs nav-fill" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" href="#login" data-bs-toggle="tab" role="tab" id="login-tab">
+                                    Login
+                                </a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" href="#register" data-bs-toggle="tab" role="tab" id="register-tab">
+                                    Create Account
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="login" role="tabpanel">
+                                <form class="login">
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="login-form-email">
+                                            Email
+                                        </label>
+                                        <input type="email" id="login-form-email" class="form-control required"
+                                            value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="login-form-password">
+                                            Password
+                                        </label>
+                                        <input type="password" id="login-form-password" class="form-control required"
+                                            name="loginPassword">
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input">
+                                            <label for="" class="form-check-label">Remember me</label>
+                                        </div>
+                                        <a href="forgotPassword" class="link" data-bs-toggle="modal">Forgot Password?</a>
+                                    </div>
+                                    <button type="submit" class="btn btn-theme">Login</button>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="register" role="tabpanel">
+                                <form>
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="registration-form-fname">First
+                                            Name</label>
+                                        <input type="text" class="form-control" id="registration-form-fname" value=""
+                                            maxlength="50">
+                                        <div class="invalid-feedback" id="form-fname-error"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="registration-form-lname">Last
+                                            Name</label>
+                                        <input type="text" class="form-control" id="registration-form-lname"
+                                            maxlength="50">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="registration-form-phone">Phone</label>
+                                        <input type="tel" class="form-control" id="registration-form-phone" maxlength="2147483647"
+                                            pattern="^\(?([2-9][0-8][0-9])\)?[\-\. ]?([2-9][0-9]{2})[\-\. ]?([0-9]{4})(\s*x[0-9]+)?$"
+                                            placeholder="Example: 9234567890">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="registration-form-email">Email</label>
+                                        <input type="text" class="form-control" id="registration-form-email" value=""
+                                            maxlength="50" pattern="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="registration-form-email-confirm">Confirm
+                                            Email</label>
+                                        <input type="text" class="form-control" id="registration-form-email-confirm"
+                                            value="" maxlength="50" pattern="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-control-label"
+                                            for="registration-form-password">Password</label>
+                                        <input type="password" class="form-control" id="registration-form-password"
+                                            value="" maxlength="255" minlength="8">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-control-label"
+                                            for="registration-form-password-confirm">Confirm
+                                            Password</label>
+                                        <input type="password" class="form-control"
+                                            id="registration-form-password-confirm" value="" maxlength="255"
+                                            minlength="8">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" class="custom-control-input" id="add-to-email-list"
+                                            name="dwfrm_profile_customer_addtoemaillist" value="true">
+                                        <label class="custom-control-label" for="add-to-email-list">
+                                            Please add me to TrueSword’s email list
+                                        </label>
+                                    </div>
+                                    <button type="submit" class="btn btn-block btn-primary">
+                                        Create Account
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="orderForm">
+                        <form action="/ordertrack" class="trackorder" method="POST" name="trackorder-form">
+                            <h2>Check order</h2>
+                            <p class="track-order-header-text">See your order even if you are not a registered user.
+                                Enter
+                                the order
+                                number and the billing address ZIP code.</p>
+                            <div class="form-group">
+                                <label class="form-control-label" for="trackorder-form-number">Order number</label>
+                                <input type="text" required="" class="form-control" id="trackorder-form-number"
+                                    name="trackOrderNumber">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" for="trackorder-form-email">Order Email</label>
+                                <input type="text" required="" class="form-control" id="trackorder-form-email"
+                                    pattern="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$" maxlength="50">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" for="trackorder-form-zip">Billing ZIP code</label>
+                                <input type="text" required="" class="form-control" id="trackorder-form-zip"
+                                    pattern="(^\d{5}(-\d{4})?$)|(^[abceghjklmnprstvxyABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Za-z]{1} *\d{1}[A-Za-z]{1}\d{1}$)">
+                            </div>
+
+                            <div class="form-group mb-0">
+                                <button class="btn btn-theme" type="submit" name="submit" value="submit">
+                                    Check status
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 
-    <div class="preFooter">
+    <div class="preFooter mt-0">
         <div class="container">
             <h2>Stay upto date with our Latest Releases, Sales & Promotions!</h2>
             <div class="subscribeField">

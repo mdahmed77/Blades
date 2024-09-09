@@ -3,36 +3,36 @@
   margin: 30px 0 20px;
 }
 
-@media (min-width: 992px) {
-  .hide-before {
-    display: none !important;
-  }
-}
-@media (max-width: 991px) {
-  .hide-before {
-    display: block !important;
-  }
-}
-
-@media (min-width: 992px) {
-  .hide-after {
-    display: block !important;
-  }
-}
-@media (max-width: 991px) {
-  .hide-after {
-    display: none !important;
-  }
-}
-
 .table {
   table-layout: fixed;
   margin: 0;
+  background-color: #f8f9f9;
+  box-shadow: 0px 0px 1px 0 rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 991px) {
   .table {
     display: flex;
     flex-direction: column;
+  }
+}
+@media (min-width: 992px) {
+  .table .hide-before {
+    display: none !important;
+  }
+}
+@media (max-width: 991px) {
+  .table .hide-before {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) {
+  .table .hide-after {
+    display: block !important;
+  }
+}
+@media (max-width: 991px) {
+  .table .hide-after {
+    display: none !important;
   }
 }
 @media (max-width: 991px) {
@@ -88,7 +88,6 @@
   .table tbody tr td {
     display: flex;
     align-items: center;
-    padding: 10px 0;
     flex-grow: 1;
   }
   .table tbody tr td:nth-last-child(2) {
@@ -106,14 +105,19 @@
   border: 1px solid #e8e8e1;
   background-color: #f0f2f4;
 }
+@media (max-width: 480px) {
+  .table tbody tr td .thumb {
+    display: none !important;
+  }
+}
+.table tbody tr td .thumb img {
+  height: 65px;
+  width: 65px;
+}
 @media (max-width: 991px) {
   .table tbody tr td .thumb {
     display: flex;
     align-items: center;
-  }
-  .table tbody tr td .thumb img {
-    height: 65px;
-    width: 65px;
   }
 }
 .table tbody tr td .pcode {
@@ -141,8 +145,14 @@
 @media (max-width: 991px) {
   .table tbody tr td .input-group {
     position: absolute;
-    left: 76px;
+    left: 86px;
     bottom: 12px;
+    width: auto;
+  }
+}
+@media (max-width: 480px) {
+  .table tbody tr td .input-group {
+    left: 10px;
   }
 }
 .table tbody tr td .input-group input {
@@ -203,25 +213,25 @@ input[type=number] {
   color: #ba4444;
 }
 
-.countinue {
+.continue {
   max-width: 360px;
   width: 100%;
-  margin-right: 15px;
   margin-left: auto;
   display: block;
-  background-color: #f4f4f4;
+  background-color: #f2f4f6;
   border: 1px solid #eee;
-  padding: 15px;
+  padding: 10px 15px 15px;
 }
-.countinue span {
+.continue span {
   font-size: 16px;
-  font-family: bold;
+  font-family: semi;
 }
-.countinue h5 {
-  font-size: 24px;
-  font-family: bold;
+.continue h5 {
+  font-size: 28px;
+  font-family: base;
+  margin: 0;
 }
-.countinue .btn {
+.continue .btn {
   width: 100%;
-  margin-top: 25px;
+  margin-top: 10px;
 }

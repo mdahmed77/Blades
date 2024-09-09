@@ -1133,7 +1133,7 @@
     content: "\f724"
 }
 
-.fa-strikethrough:before {
+.fa-delthrough:before {
     content: "\f0cc"
 }
 
@@ -17661,8 +17661,8 @@
     content: "\f724\f724"
 }
 
-.fa-duotone.fa-strikethrough:after,
-.fad.fa-strikethrough:after {
+.fa-duotone.fa-delthrough:after,
+.fad.fa-delthrough:after {
     content: "\f0cc\f0cc"
 }
 
